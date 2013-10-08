@@ -7,6 +7,7 @@ var TRANSLATIONS = {
     },
     errors: {
       "can't be blank": 'moet ingevuld worden',
+      "is not valid": 'is ongeldig'
     }
   }
 };
