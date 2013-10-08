@@ -4,18 +4,28 @@
     <title>Coconut app preregistration</title>
     <link href="stylesheets/style.css" rel="stylesheet" type="text/css" media="screen">
     <script src="//codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/javascripts/i18n.js" charset="utf-8"></script>
     <script src="/javascripts/user_registration.js" charset="utf-8"></script>
   </head>
 
   <body>
     <div id="container">
-      <h1>Ja, ik wil die vette Coconut-app!</h1>
+      <h1 class="yes"></h1>
       <form id="new_user">
+        <label for="user[name]" id="user_name_label"></label>
         <input type="text" name="user[name]" id="user_name">
+
+        <label for="user[email]" id="user_email_label"></label>
         <input type="text" name="user[email]" id="user_email">
+
         <input type="submit" value="Add">
       </form>
-      <table id="users"></table>
+      <table id="users">
+        <tr>
+          <th class="header name"></th>
+          <th class="header email"></th>
+        </tr>
+      </table>
     </div>
   </body>
 </html>

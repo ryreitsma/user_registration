@@ -12,5 +12,11 @@ jQuery(function() {
   jQuery.getJSON('/users', function(users) {
     jQuery.each(users, function() { addTask(this); });
   });
+
+  jQuery('#container .yes').text(t('iWantThatApp'));
+  jQuery('#user_name_label').text(t('users.name'));
+  jQuery('#user_email_label').text(t('users.email'));
+  jQuery('#users .header.name').text(t('users.name'));
+  jQuery('#users .header.email').text(t('users.email'));
 });
 
