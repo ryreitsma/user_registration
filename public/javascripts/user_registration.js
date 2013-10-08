@@ -3,9 +3,28 @@ jQuery(function() {
     jQuery('#users').append('<tr><td>' + user.name + '</td><td>' + user.email + '</td></tr>');
   }
 
+  function clearErrors() {
+    jQuery('input').removeClass('error');
+    jQuery('.errorMsg').hide();
+  }
+
+  function handleError(responseJSON) {
+    for (key in responseJSON) {
+      var msg = t('errors.' + responseJSON[key][0]);
+      jQuery('#user_' + key).addClass('error');
+      jQuery('#user_' + key + '_error').text(msg).show();
+    }
+  }
+
   jQuery('#new_user').submit(function(e) {
-    jQuery.post('/users', jQuery(this).serialize(), addTask);
-    this.reset();
+    var self = this;
+
+    clearErrors();
+
+    jQuery.post('/users', jQuery(self).serialize(), addTask)
+      .fail(function(data) { handleError(data.responseJSON); })
+      .done(function() { self.reset(); });
+
     e.preventDefault();
   });
 

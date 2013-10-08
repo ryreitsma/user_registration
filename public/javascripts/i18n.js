@@ -4,6 +4,9 @@ var TRANSLATIONS = {
     users: {
       name: 'naam',
       email: 'e-mailadres'
+    },
+    errors: {
+      "can't be blank": 'moet ingevuld worden',
     }
   }
 };

@@ -14,3 +14,18 @@ a { color: #0000ff; }
   border: solid 1px black;
   margin-top: 20px;
 }
+
+input {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
+
+input.error {
+  border-color: red;
+}
+
+span.errorMsg {
+  display: none;
+  color: red;
+}
