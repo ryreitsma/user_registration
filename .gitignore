@@ -23,3 +23,6 @@
 
 # Ignore secret_token config file
 /config/secret_token
+
+# Ignore compiled assets
+/public/assets

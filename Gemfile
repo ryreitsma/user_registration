@@ -11,6 +11,11 @@ gem 'sqlite3'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
+gem 'jquery-rails'
+gem 'coffee-rails'
+gem 'therubyracer'
+gem 'uglifier'
+
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
