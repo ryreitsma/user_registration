@@ -1,6 +1,8 @@
 class UserRegistration.UsersController extends UserRegistration.ApplicationController
   routingKey: 'users'
 
+  @beforeAction 'fetchUser', only: 'show'
+
   index: (params) ->
     @set('users', UserRegistration.User.get('all').sortedBy('name'))
 
@@ -19,3 +21,6 @@ class UserRegistration.UsersController extends UserRegistration.ApplicationContr
 
   destroy: (params) ->
 
+  fetchUser: (params) ->
+    UserRegistration.User.find params.id, @errorHandler (list) =>
+      @set('user', list)
