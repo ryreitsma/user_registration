@@ -1,0 +1,48 @@
+<div id="container">
+  <h1 class="yes"></h1>
+  <form id="new_user" data-formfor-user="user" data-event-submit="create">
+    <div>
+      <div>
+        <span class="error" data-foreach-error="user.errors">
+          <span data-bind="error.attribute"></span>
+          <span data-bind="error.message"</span>
+        </span>
+      </div>
+
+      <div>
+        <label>Name:</label>
+        <input data-bind="user.name" />
+      </div>
+
+      <div>
+        <label>Email:</label>
+        <input data-bind="user.email" />
+      </div>
+
+      <input type="submit" data-event-click="create" value="Save"></a>
+    </div>
+
+    <div data-hideif="user.isNew">
+      We hebben uw registratie ontvangen. Cool!
+    </div>
+  </form>
+  <!--
+  <form id="new_user" data-formfor-user="user">
+    <label for="user[name]" id="user_name_label"></label>
+    <input data-bind="user.name">
+
+    <label for="user[email]" id="user_email_label"></label>
+    <input type="text" name="user[email]" id="user_email">
+
+    <a data-event-click="create" class="fl">Save</a>
+  </form>
+  <table id="users">
+    <tr>
+      <th class="header name"></th>
+      <th class="header email"></th>
+    </tr>
+  </table>
+  -->
+</div>
+
+

@@ -16,6 +16,8 @@ gem 'coffee-rails'
 gem 'therubyracer'
 gem 'uglifier'
 
+gem 'batman-rails'
+
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 

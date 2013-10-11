@@ -1,0 +1,1 @@
+class UserRegistration.ApplicationController extends Batman.Controller
