@@ -4,7 +4,7 @@ class UserRegistration.UsersController extends UserRegistration.ApplicationContr
   @beforeAction 'fetchUser', only: 'show'
 
   index: (params) ->
-    @set('users', UserRegistration.User.get('all').sortedBy('name'))
+    @set('users', UserRegistration.User.get('all'))
 
   show: (params) ->
 

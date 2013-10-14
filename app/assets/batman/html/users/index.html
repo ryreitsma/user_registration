@@ -9,7 +9,7 @@
 <h3 class="nav-section-title" data-showif="users.empty">No users :(</h3>
 
 <ul class="list">
-  <li class="user-item" data-foreach-user="users">
+  <li class="user-item" data-foreach-user="users.sortedBy.name">
     <a class="user-link" data-route="user">
       <span class="user-name" data-bind="user.name">Loading...</span>
       <span class="user-mail" data-bind="user.email">Loading...</span>
