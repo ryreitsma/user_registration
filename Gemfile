@@ -18,6 +18,11 @@ gem 'uglifier'
 
 gem 'batman-rails'
 
+group :development, :test do
+  gem "rspec-rails"
+  gem "poltergeist"
+end
+
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
