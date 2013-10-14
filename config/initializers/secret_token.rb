@@ -16,4 +16,4 @@
 # Using secret_token for rails3 compatibility. Change to secret_key_base
 # to avoid deprecation warning.
 # Can be safely removed in a rails3 api-only application.
-UserRegistration::Application.config.secret_token = File.read(Rails.root.join('config/secret_token'))
+UserRegistration::Application.config.secret_key_base = File.read(Rails.root.join('config/secret_token'))
