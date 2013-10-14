@@ -13,7 +13,7 @@ class UsersControllerTest < ActionController::TestCase
 
   test "should create user" do
     assert_difference('User.count') do
-      post :create, user: { name: @user.name }
+      post :create, user: { name: @user.name, email: 'some_mail@some_domain.some_tld' }
     end
 
     assert_response 201

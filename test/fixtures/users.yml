@@ -2,6 +2,8 @@
 
 one:
   name: MyString
+  email: some_mail@some_domain.some_tld
 
 two:
   name: MyString
+  email: some_mail@some_domain.some_other_tld
