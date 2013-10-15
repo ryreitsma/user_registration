@@ -8,10 +8,6 @@ gem 'rails-api'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
-group :development, :test do
-  gem 'poltergeist'
-end
-
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -23,8 +19,11 @@ gem 'uglifier'
 gem 'batman-rails'
 
 group :development, :test do
+  gem "database_cleaner"
   gem "rspec-rails"
   gem "poltergeist"
+
+  gem "selenium-webdriver"
 end
 
 # To use Jbuilder templates for JSON
