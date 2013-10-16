@@ -1,20 +1,22 @@
 defaults: &DEFAULTS
   adapter: mysql2
-  user: coconut
+  username: cocodev
+  password: coconut
+  host: localhost
 
 development:
   <<: *DEFAULTS
-  database: user_registration_development
+  database: coconut_app_user_registration_development
 
 test:
   <<: *DEFAULTS
-  database: user_registration_test
+  database: coconut_app_user_registration_test
 
 staging:
   <<: *DEFAULTS
-  database: user_registration_staging
+  database: coconut_app_user_registration_staging
 
 production:
   <<: *DEFAULTS
-  database: user_registration_production
+  database: coconut_app_user_registration_production
 
