@@ -1,8 +1,7 @@
 UserRegistration::Application.routes.draw do
-
   get "(*redirect_path)", to: "batman#index", constraints: lambda { |request| request.format == "text/html" }
 
-  resources :users, except: [:new, :edit]
+  post 'users' => 'users#create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

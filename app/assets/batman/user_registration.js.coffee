@@ -16,22 +16,7 @@
 Batman.config.pathToHTML = '/assets/html'
 
 class UserRegistration extends Batman.App
-
-  @resources 'users'
-
-  # @resources 'products'
-  # @resources 'discounts', except: ['edit']
-  # @resources 'customers', only: ['new', 'show']
-
-  # @resources 'blogs', ->
-  #   @resources 'articles'
-
-  # @resources 'pages', ->
-  #   @collection 'count'
-  #   @member 'duplicate'
-
-  # @route 'apps', 'apps#index'
-  # @route 'apps/private', 'apps#private', as: 'privateApps'
+  @route 'users/new', 'users#new'
 
   @root 'users#new'
 
