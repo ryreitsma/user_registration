@@ -24,6 +24,7 @@ group :development, :test do
   gem "poltergeist"
 
   gem "selenium-webdriver"
+  gem "capistrano-rails"
 end
 
 # To use Jbuilder templates for JSON
