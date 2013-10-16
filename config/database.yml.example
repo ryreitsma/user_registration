@@ -1,0 +1,20 @@
+defaults: &DEFAULTS
+  adapter: mysql2
+  user: coconut
+
+development:
+  <<: *DEFAULTS
+  database: user_registration_development
+
+test:
+  <<: *DEFAULTS
+  database: user_registration_test
+
+staging:
+  <<: *DEFAULTS
+  database: user_registration_staging
+
+production:
+  <<: *DEFAULTS
+  database: user_registration_production
+

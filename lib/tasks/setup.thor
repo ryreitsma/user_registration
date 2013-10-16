@@ -1,7 +1,11 @@
 class Setup < Thor
   desc :init, "prepare environment"
   def init
-    `rake secret > config/secret_token`
+    system <<-CMDS
+      rake secret > config/secret_token
+      cp config/database.yml.example config/database.yml
+      rake db:create db:schema:load db:test:prepare
+    CMDS
   end
 
   desc :poltergeist, "setup poltergeist on your machine"
@@ -23,8 +27,5 @@ class Setup < Thor
       mv phantomjs* phantomjs
       cp phantomjs/bin/phantomjs /bin
     CMDS
-
-    #`pushd /tmp ; mkdir phantomjs ; cd phantomjs ; wget  ; bunzip phantomjs* ; tar xvf phantomjs* ; 
-    #`wget https://phantomjs.googlecode.com/files/phantomjs-1.9.2-linux-x86_64.tar.bz2`
   end
 end

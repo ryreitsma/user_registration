@@ -21,8 +21,10 @@
 /log/*.log
 /tmp
 
-# Ignore secret_token config file
+# Ignore security-related config files
 /config/secret_token
+/config/database.yml
 
 # Ignore compiled assets
 /public/assets
+
