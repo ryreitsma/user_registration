@@ -22,5 +22,7 @@ else
   Capybara.javascript_driver = :poltergeist
 end
 
-Capybara.app_host = "http://localhost:3000"
-Capybara.run_server = false
+if ENV.fetch('WITH_HOST', false)
+  Capybara.app_host = ENV['WITH_HOST']
+  Capybara.run_server = false
+end
