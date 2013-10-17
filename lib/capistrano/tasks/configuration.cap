@@ -1,0 +1,18 @@
+namespace :configuration do
+  desc "Symlink config files from shared to current path"
+  task :create_symlinks do
+    on roles :web do
+      fetch(:config_files).each do |config_file|
+        execute :ln, "-fs #{shared_path}/config/#{config_file} #{release_path}/config/#{config_file}"
+      end
+    end
+  end
+end
+
+namespace :load do
+  before 'deploy:updated', 'configuration:create_symlinks'
+
+  task :defaults do
+    set :config_files, %w(database.yml)
+  end
+end
