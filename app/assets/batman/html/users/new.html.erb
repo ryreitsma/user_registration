@@ -1,33 +1,70 @@
 <% honeypot_field_name = Rails.application.config.honeypot_field_name %>
 
-<div id="container">
-  <h1 class="yes">Ja, ik wil die vette Coconut-app!</h1>
-  <div id="registration-form">
-    <form id="new_user" data-formfor-user="user" data-event-submit="create">
-      <div>
-        <span class="error" data-foreach-error="user.errors">
-          <span data-bind="error.attribute"></span>
-          <span data-bind="error.message"></span>
-        </span>
+<div class="container-fluid">
+
+  <div class="jumbotron">
+
+      <div id="logo">
+        <img class="img-responsive horizontal-center" src="/images/logo.png">
       </div>
 
-      <div>
-        <input data-bind="user.name" placeholder="uw naam" name="name"/>
+      <div id="pay-off">
+        <h4>Voor medewerkers van grote organisaties die behoefte<br>
+        hebben aan meer betrokkenheid en relevante kennis.</h4>
       </div>
 
-      <div>
-        <input data-bind="user.email" placeholder="uw e-mail adres" name="mail"/>
+      <div id="phones">
+          <img class="img-responsive horizontal-center" src="/images/ensemble.png">
+      </div>
+
+  </div>
+</div>
+
+<div id="content" class="container">
+
+  <div class="row">
+    <div class="col-sm-5 col-sm-offset-1 col-xs-12">
+      <p>Voor medewerkers van 500+ organisaties die behoefte hebben aan meer betrokkenheid en relevante kennis en informatie.</p>
+
+      <ul>
+        <li>Test als eerste mee</li>
+        <li>Gebruik de laatste features</li>
+        <li>Denk mee en geef feedback</li>
+      </ul>
+
+    </div>
+
+    <div class="col-sm-5 col-xs-12" id="registration-form" role="form">
+      <div class="row">
+        <form id="new_user" data-formfor-user="user" data-event-submit="create">
+          <div>
+            <span class="error" data-foreach-error="user.errors">
+              <span data-bind="error.attribute"></span>              
+              <span data-bind="error.message"></span>              
+            </span>
+          </div>
+
+          <div class="form-group">
+            <input class="col-xs-12" type="text" data-bind="user.name" placeholder="Uw naam" name="name"/>
+          </div>
+
+          <div class="form-group">
+            <input class="col-xs-12" type="email" data-bind="user.email" placeholder="Uw e-mail adres" name="mail"/>
       </div>
 
       <div>
         <input data-bind="user.<%= honeypot_field_name %>" placeholder="<%= honeypot_field_name %>" name="<%= honeypot_field_name %>"/>
-      </div>
+          </div>
 
-      <input type="submit" data-event-click="create" value="Save"></a>
-    </form>
+          <div class="form-group">
+            <input class="btn col-sm-6 col-xs-12" type="submit" data-event-click="create" value="Aanmelden"></a>
+          </div>
+        </form>
+    </div>
   </div>
 
-  <div class="feedback" data-hideif="user.isNew">
-    We hebben uw registratie ontvangen. Cool!
+    <div class="feedback" data-hideif="user.isNew">
+      We hebben uw registratie ontvangen. Cool!
+    </div>
   </div>
 </div>
