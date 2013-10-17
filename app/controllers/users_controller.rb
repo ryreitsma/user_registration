@@ -26,4 +26,8 @@ private
 
     render json: fake_user, status: :created
   end
+
+  def strip_honeypot_param
+    params[:user].delete(honeypot_field_name)
+  end
 end

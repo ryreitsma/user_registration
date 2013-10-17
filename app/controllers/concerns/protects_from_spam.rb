@@ -11,6 +11,8 @@ module ProtectsFromSpam
 
       if honeypot_field.present?
         honeypot_response
+      else
+        strip_honeypot_param
       end
     end
 
@@ -24,6 +26,10 @@ module ProtectsFromSpam
 
     def honeypot_field_name
       Rails.application.config.honeypot_field_name
+    end
+
+    def strip_honeypot_param
+      params.delete(honeypot_field_name)
     end
   end
 end
