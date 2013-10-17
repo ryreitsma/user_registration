@@ -6,10 +6,10 @@ feature "Registering for the Coconut App", js: true do
 
     visit "/"
 
-    fill_in('uw naam', with: 'henk')
+    fill_in('Uw naam', with: 'henk')
     expect(page).to have_no_content(expected_error)
 
-    click_button 'Save'
+    click_button 'Aanmelden'
 
     expect(page).to have_content(expected_error)
   end
@@ -19,11 +19,11 @@ feature "Registering for the Coconut App", js: true do
 
     visit "/"
 
-    fill_in('uw naam', with: 'henk')
-    fill_in('uw e-mail adres', with: 'henk')
+    fill_in('Uw naam', with: 'henk')
+    fill_in('Uw e-mail adres', with: 'henk')
     expect(page).to have_no_content(expected_error)
 
-    click_button 'Save'
+    click_button 'Aanmelden'
 
     expect(page).to have_content(expected_error)
   end
@@ -33,10 +33,10 @@ feature "Registering for the Coconut App", js: true do
 
     visit "/"
 
-    fill_in('uw e-mail adres', with: 'henk@ogd.nl')
+    fill_in('Uw e-mail adres', with: 'henk@ogd.nl')
     expect(page).to have_no_content(expected_error)
 
-    click_button 'Save'
+    click_button 'Aanmelden'
 
     expect(page).to have_content(expected_error)
   end
@@ -46,11 +46,11 @@ feature "Registering for the Coconut App", js: true do
 
     visit "/"
 
-    fill_in('uw naam', with: 'henk')
-    fill_in('uw e-mail adres', with: 'henk@ogd.nl')
+    fill_in('Uw naam', with: 'henk')
+    fill_in('Uw e-mail adres', with: 'henk@ogd.nl')
     expect(page).to have_no_content(expected_feedback)
 
-    click_button 'Save'
+    click_button 'Aanmelden'
 
     expect(page).to have_content(expected_feedback)
   end

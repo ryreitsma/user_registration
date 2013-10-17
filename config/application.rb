@@ -11,6 +11,7 @@ module UserRegistration
     config.assets.paths << Rails.root.join('app/assets/html')
     config.assets.register_mime_type('text/html', '.html')
 
+    config.honeypot_field_name = "extra_info"
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
