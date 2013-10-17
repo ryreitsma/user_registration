@@ -9,16 +9,16 @@ module ProtectsFromSpam
     def ensure_not_spam
       current_action = params[:action]
 
-      if honeypot_for(current_action).present?
-        honeypot_response_for(current_action)
+      if honeypot_field.present?
+        honeypot_response
       end
     end
 
-    def honeypot_for(action)
-      params[:extra_info]
+    def honeypot_field
+      params[honeypot_field_name]
     end
 
-    def honeypot_response_for(action)
+    def honeypot_response
       head :ok
     end
 

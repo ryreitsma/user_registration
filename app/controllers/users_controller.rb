@@ -14,11 +14,11 @@ class UsersController < ApplicationController
   end
 
 private
-  def honeypot_for(action)
+  def honeypot_field
     params[:user][honeypot_field_name]
   end
 
-  def honeypot_response_for(action)
+  def honeypot_response
     user_params = params[:user]
     user_params.delete(honeypot_field_name)
 
