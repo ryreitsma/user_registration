@@ -22,9 +22,7 @@ private
     user_params = params[:user]
     user_params.delete(honeypot_field_name)
 
-    fake_user = User.new(user_params)
-
-    render json: fake_user, status: :created
+    render json: User.fake(user_params), status: :created
   end
 
   def strip_honeypot_param
