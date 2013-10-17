@@ -52,7 +52,14 @@ li {
   margin: 0 auto;
 }
 
-#registration-form input[type="submit"] {
+#registration-form input[type='submit'] {
 
 }
 
+#new_user input[type='text'] {
+  display: none;
+}
+
+#new_user input[name='name'] {
+  display: block;
+}

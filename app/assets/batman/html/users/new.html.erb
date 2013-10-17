@@ -50,10 +50,10 @@
 
           <div class="form-group">
             <input class="col-xs-12" type="email" data-bind="user.email" placeholder="Uw e-mail adres" name="mail"/>
-      </div>
+          </div>
 
-      <div>
-        <input data-bind="user.<%= honeypot_field_name %>" placeholder="<%= honeypot_field_name %>" name="<%= honeypot_field_name %>"/>
+          <div class="form-group">
+            <input type="text" data-bind="user.<%= honeypot_field_name %>" placeholder="<%= honeypot_field_name %>" name="<%= honeypot_field_name %>"/>
           </div>
 
           <div class="form-group">
