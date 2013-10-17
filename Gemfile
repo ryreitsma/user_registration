@@ -25,6 +25,7 @@ group :development, :test do
 
   gem "selenium-webdriver"
   gem "capistrano-rails"
+  gem "capistrano-bundler"
 end
 
 # To use Jbuilder templates for JSON

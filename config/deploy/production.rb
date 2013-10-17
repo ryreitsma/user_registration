@@ -1,11 +1,12 @@
 set :stage, :production
+set :rails_env, :production
 
 # Simple Role Syntax
 # ==================
 # Supports bulk-adding hosts to roles, the primary
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
-server 'ec2-54-229-224-172.eu-west-1.compute.amazonaws.com', roles: [:web], user: 'deploy'
+role :all, 'ec2-54-229-224-172.eu-west-1.compute.amazonaws.com'
 
 # Extended Server Syntax
 # ======================
@@ -13,7 +14,7 @@ server 'ec2-54-229-224-172.eu-west-1.compute.amazonaws.com', roles: [:web], user
 # definition into the server list. The second argument
 # something that quacks like a has can be used to set
 # extended properties on the server.
-#server 'example.com', user: 'deploy', roles: %w{web app}, my_property: :my_value
+server 'ec2-54-229-224-172.eu-west-1.compute.amazonaws.com', user: 'deploy', roles: %w{web app}
 
 # you can set custom ssh options
 # it's possible to pass any option but you need to keep in mind that net/ssh understand limited list of options
