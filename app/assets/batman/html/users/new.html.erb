@@ -1,3 +1,5 @@
+<% honeypot_field_name = Rails.application.config.honeypot_field_name %>
+
 <div id="container">
   <h1 class="yes">Ja, ik wil die vette Coconut-app!</h1>
   <div id="registration-form">
@@ -15,6 +17,10 @@
 
       <div>
         <input data-bind="user.email" placeholder="uw e-mail adres" name="mail"/>
+      </div>
+
+      <div>
+        <input data-bind="user.<%= honeypot_field_name %>" placeholder="<%= honeypot_field_name %>" name="<%= honeypot_field_name %>"/>
       </div>
 
       <input type="submit" data-event-click="create" value="Save"></a>
