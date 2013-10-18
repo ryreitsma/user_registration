@@ -177,5 +177,6 @@ DEPENDENCIES
   rails-api
   rspec-rails
   selenium-webdriver
+  sprockets
   therubyracer
   uglifier
