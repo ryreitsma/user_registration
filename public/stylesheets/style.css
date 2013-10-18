@@ -30,11 +30,12 @@ li {
   margin-bottom: 15px;
 }
 
-#pay-off {
+#pay-off p {
   font-family: Cabin, bold;
   font-weight: bold;
   text-align: center;
   padding:30px;
+  max-width: 600px;
 }
 
 #content p{
