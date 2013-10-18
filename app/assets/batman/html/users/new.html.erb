@@ -1,7 +1,6 @@
 <% honeypot_field_name = Rails.application.config.honeypot_field_name %>
 
 <div class="container-fluid">
-
   <div class="jumbotron">
 
       <div id="logo">
@@ -9,8 +8,8 @@
       </div>
 
       <div id="pay-off">
-        <h4>Voor medewerkers van grote organisaties die behoefte<br>
-        hebben aan meer betrokkenheid en relevante kennis.</h4>
+        <p class="horizontal-center">Voor medewerkers van grote organisaties die behoefte
+        hebben aan meer betrokkenheid en relevante kennis</p>
       </div>
 
       <div id="phones">
@@ -21,35 +20,33 @@
 </div>
 
 <div id="content" class="container">
-
   <div class="row">
+
     <div class="col-sm-5 col-sm-offset-1 col-xs-12">
       <p>Voor medewerkers van 500+ organisaties die behoefte hebben aan meer betrokkenheid en relevante kennis en informatie.</p>
-
       <ul>
         <li>Test als eerste mee</li>
         <li>Gebruik de laatste features</li>
         <li>Denk mee en geef feedback</li>
       </ul>
-
     </div>
 
     <div class="col-sm-5 col-xs-12" id="registration-form" role="form">
       <div class="row">
         <form id="new_user" data-formfor-user="user" data-event-submit="create">
-          <div>
-            <span class="error" data-foreach-error="user.errors">
-              <span data-bind="error.attribute"></span>              
-              <span data-bind="error.message"></span>              
-            </span>
+
+          <span class="error" data-foreach-error="user.errors">
+            <div data-bind-class="error.attribute"><span data-bind="error.attribute"></span>
+              <span data-bind="error.message"></span>
+            </div>
+          </span>
+
+          <div class="form-group">
+            <input type="text" class="form-control col-xs-12" data-bind="user.name" placeholder="Uw naam" name="name"/>
           </div>
 
           <div class="form-group">
-            <input class="col-xs-12" type="text" data-bind="user.name" placeholder="Uw naam" name="name"/>
-          </div>
-
-          <div class="form-group">
-            <input class="col-xs-12" type="email" data-bind="user.email" placeholder="Uw e-mail adres" name="mail"/>
+            <input type="email" class="form-control col-xs-12"  data-bind="user.email" placeholder="Uw e-mail adres" name="mail"/>
           </div>
 
           <div class="form-group">
@@ -57,14 +54,20 @@
           </div>
 
           <div class="form-group">
-            <input class="btn col-sm-6 col-xs-12" type="submit" data-event-click="create" value="Aanmelden"></a>
+            <input id="submitbutton" class="btn col-sm-6 col-xs-12 horizontal-center" type="submit" data-event-click="create" value="Aanmelden"></a>
           </div>
+
+          <div id="emailNote" class="form-group col-sm-6 col-xs-12">
+            <span>Wij houden u per email op de hoogte</span>
+          </div>
+
         </form>
+      </div>
     </div>
-  </div>
 
     <div class="feedback" data-hideif="user.isNew">
       We hebben uw registratie ontvangen. Cool!
     </div>
+
   </div>
 </div>
