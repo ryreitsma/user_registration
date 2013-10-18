@@ -3,11 +3,10 @@ SSHKit.config.command_map[:rake] = "bundle exec rake"
 set :application, 'user_registration'
 set :repo_url, 'https://github.com/coconut-ogd/user_registration.git'
 set :bundle_flags, '--deployment'
-# ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
+set :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
 set :deploy_to, '/var/www/user_registration'
 set :scm, :git
-ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 set :format, :pretty
 set :log_level, :debug
 # set :pty, true
