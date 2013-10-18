@@ -1,7 +1,6 @@
 <% honeypot_field_name = Rails.application.config.honeypot_field_name %>
 
 <div class="container-fluid">
-
   <div class="jumbotron">
 
       <div id="logo">
@@ -9,8 +8,8 @@
       </div>
 
       <div id="pay-off">
-        <h4>Voor medewerkers van grote organisaties die behoefte<br>
-        hebben aan meer betrokkenheid en relevante kennis.</h4>
+        <p>Voor medewerkers van grote organisaties die behoefte<br>
+        hebben aan meer betrokkenheid en relevante kennis</p>
       </div>
 
       <div id="phones">
@@ -21,17 +20,15 @@
 </div>
 
 <div id="content" class="container">
-
   <div class="row">
+
     <div class="col-sm-5 col-sm-offset-1 col-xs-12">
       <p>Voor medewerkers van 500+ organisaties die behoefte hebben aan meer betrokkenheid en relevante kennis en informatie.</p>
-
       <ul>
         <li>Test als eerste mee</li>
         <li>Gebruik de laatste features</li>
         <li>Denk mee en geef feedback</li>
       </ul>
-
     </div>
 
     <div class="col-sm-5 col-xs-12" id="registration-form" role="form">
@@ -57,7 +54,7 @@
           </div>
 
           <div class="form-group">
-            <input id="submitbutton" class="btn col-sm-6 col-xs-12" type="submit" data-event-click="create" value="Aanmelden"></a>
+            <input id="submitbutton" class="btn col-sm-6 col-xs-12 horizontal-center" type="submit" data-event-click="create" value="Aanmelden"></a>
           </div>
 
           <div id="emailNote" class="form-group col-sm-6 col-xs-12">
@@ -65,11 +62,12 @@
           </div>
 
         </form>
+      </div>
     </div>
-  </div>
 
     <div class="feedback" data-hideif="user.isNew">
       We hebben uw registratie ontvangen. Cool!
     </div>
+
   </div>
 </div>
