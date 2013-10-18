@@ -50,16 +50,16 @@ end
 
 def start_options
   if config_file
-    "-q -d -e #{fetch(:stage)} -C #{config_file}"
+    "-q -d -e #{fetch(:rails_env)} -C #{config_file}"
   else
-    "-q -d -e #{fetch(:stage)} -b '#{puma_socket}' -S #{state_path} --control 'unix://#{shared_path}/sockets/pumactl.sock'"
+    "-q -d -e #{fetch(:rails_env)} -b '#{puma_socket}' -S #{state_path} --control 'unix://#{shared_path}/sockets/pumactl.sock'"
   end
 end
 
 def config_file
   @_config_file ||= begin
     file = fetch(:puma_config_file, nil)
-    file = "./config/puma/#{fetch(:stage)}.rb" if !file && File.exists?("./config/puma/#{fetch(:stage)}.rb")
+    file = "./config/puma/#{fetch(:rails_env)}.rb" if !file && File.exists?("./config/puma/#{fetch(:rails_env)}.rb")
     file
   end
 end
