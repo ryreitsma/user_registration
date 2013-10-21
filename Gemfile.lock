@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:rails-api/rails-api.git
+  remote: https://github.com/rails-api/rails-api.git
   revision: dc41dca6c61c27f96d2df10550c48d33c58ab3c1
   branch: master
   specs:
