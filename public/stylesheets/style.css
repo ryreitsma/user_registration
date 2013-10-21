@@ -177,17 +177,6 @@ input.error {
 /* Small Devices*/
 @media (max-width: 515px) {
 
-  #phones img {
-    display: none;
-  }
-
-  #phones {
-    background:url(../images/small_phones_bg.png) no-repeat;
-    min-height: 380px;
-    background-size: cover;
-    background-position: center bottom;
-  }
-
   #pay-off, #logo {
     margin-left: 30px;
     margin-right: 30px;
