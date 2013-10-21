@@ -5,10 +5,13 @@ class UserRegistration.User extends Batman.Model
   @persist Batman.RailsStorage
 
   @validate 'name', presence: true
-  @validate 'email', presence: true
+  @validate 'email', pattern: /\w.*@.*\w/
 
   # Use @encode to tell batman.js which properties Rails will send back with its JSON.
   @encode 'name', 'email', '<%= Rails.application.config.honeypot_field_name %>'
+
+  @accessor 'heetHenk', ->
+      @get('name') == 'henk'
 
   @encodeTimestamps()
 
