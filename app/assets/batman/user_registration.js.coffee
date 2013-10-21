@@ -16,6 +16,7 @@
 #= require_tree ./views
 
 Batman.config.pathToHTML = '/assets/html'
+Batman.I18N.enable()
 
 class UserRegistration extends Batman.App
   @route 'users/new', 'users#new'
