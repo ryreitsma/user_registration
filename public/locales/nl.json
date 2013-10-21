@@ -1,0 +1,13 @@
+{
+  "nl": {
+    "user": {
+      "name" : "naam",
+      "form" : {
+        "placeholders": {
+          "name": "Uw naam",
+          "email": "Uw e-mail adres"
+        }
+      }
+    }
+  }
+}

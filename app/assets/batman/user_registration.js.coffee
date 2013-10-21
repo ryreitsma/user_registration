@@ -6,6 +6,8 @@
 #= require jquery
 #= require batman/batman.jquery
 
+#= require batman.i18n
+
 #= require_self
 
 #= require_tree ./lib
