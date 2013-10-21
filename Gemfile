@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 gem 'sprockets-rails'
 
-gem 'rails-api'
+gem 'rails-api', :git => 'git@github.com:rails-api/rails-api.git', :branch => 'master'
 
 gem 'mysql2'
 gem 'puma'

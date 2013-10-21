@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    @user = User.new(params[:user])
+    @user = User.new(params[:user].permit(:name, :email))
 
     if @user.save
       render json: @user, status: :created
