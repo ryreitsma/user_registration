@@ -6,7 +6,7 @@ body {
 }
 
 ul {
-  list-style-image:url('../images/bullet.png');
+  list-style-image: image-url('bullet.png');
   padding-left: 17px;
   line-height: 30px;
 }
@@ -22,7 +22,7 @@ li {
 }
 
 #bg-container {
-  background-image:url("../images/grid.png");
+  background-image: image-url("grid.png");
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: contain;
@@ -180,7 +180,7 @@ input.error {
   }
 
   #phones {
-    background:url(../images/small_phones_bg.png) no-repeat;
+    background: image-url('small_phones_bg.png') no-repeat;
     min-height: 380px;
     background-size: cover;
     background-position: center bottom;

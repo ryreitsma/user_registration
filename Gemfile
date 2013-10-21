@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
-gem 'sprockets'
+gem 'sprockets-rails'
 
 gem 'rails-api'
 
@@ -14,6 +14,7 @@ gem 'puma'
 
 gem 'jquery-rails'
 gem 'coffee-rails'
+gem 'sass-rails'
 gem 'therubyracer'
 gem 'uglifier'
 

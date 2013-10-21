@@ -8,7 +8,7 @@ Bundler.require(:default, Rails.env)
 
 module UserRegistration
   class Application < Rails::Application
-    config.assets.paths << Rails.root.join('app/assets/html')
+    config.assets.paths << Rails.root.join('app/assets/batman/html')
     config.assets.register_mime_type('text/html', '.html')
 
     config.honeypot_field_name = "extra_info"

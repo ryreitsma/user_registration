@@ -1,5 +1,6 @@
 UserRegistration::Application.routes.draw do
-  get "(*redirect_path)", to: "batman#index", constraints: lambda { |request| request.format == "text/html" }
+  #get "(*redirect_path)", to: "batman#index", constraints: lambda { |request| request.format == "text/html" }
+  root to: "batman#index"
 
   post 'users' => 'users#create'
   # The priority is based upon order of creation: first created -> highest priority.
