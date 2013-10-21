@@ -8,8 +8,7 @@
       </div>
 
       <div id="pay-off">
-        <p class="horizontal-center">Voor medewerkers van grote organisaties die behoefte
-        hebben aan meer betrokkenheid en relevante kennis</p>
+        <p class="horizontal-center" data-bind="'content.payoff' | t"></p>
       </div>
 
       <div id="bg-container">
@@ -25,11 +24,11 @@
   <div class="row">
 
     <div class="col-sm-5 col-sm-offset-1 col-xs-12">
-      <p>Voor medewerkers van 500+ organisaties die behoefte hebben aan meer betrokkenheid en relevante kennis en informatie.</p>
+      <p data-bind="'content.description' | t"></p>
       <ul>
-        <li>Test als eerste mee</li>
-        <li>Gebruik de laatste features</li>
-        <li>Denk mee en geef feedback</li>
+        <li data-bind="'content.advantage.one'   | t"></li>
+        <li data-bind="'content.advantage.two'   | t"></li>
+        <li data-bind="'content.advantage.three' | t"></li>
       </ul>
     </div>
 
@@ -38,17 +37,18 @@
         <form id="new_user" data-formfor-user="user" data-event-submit="create">
 
           <span class="error" data-foreach-error="user.errors">
-            <div data-bind-class="error.attribute"><span data-bind="error.attribute"></span>
+            <div data-bind-class="error.attribute">
+              <span data-bind="error.attribute | prepend 'user.' | translate"></span>
               <span data-bind="error.message"></span>
             </div>
           </span>
 
           <div class="form-group">
-            <input type="text" class="form-control col-xs-12" data-bind="user.name" placeholder="Uw naam" name="name"/>
+            <input type="text" class="form-control col-xs-12" data-bind="user.name" data-bind-placeholder="'user.form.placeholders.name' | t" name="name"/>
           </div>
 
           <div class="form-group">
-            <input type="email" class="form-control col-xs-12"  data-bind="user.email" placeholder="Uw e-mail adres" name="mail"/>
+            <input type="email" class="form-control col-xs-12"  data-bind="user.email" data-bind-placeholder="'user.form.placeholders.email' | t" name="mail"/>
           </div>
 
           <div class="form-group">
@@ -56,17 +56,16 @@
           </div>
 
           <div class="form-group">
-            <input id="submitbutton" class="btn col-sm-6 col-xs-12 horizontal-center" type="submit" data-event-click="create" value="Aanmelden"></a>
+            <input id="submitbutton" class="btn col-sm-6 col-xs-12 horizontal-center" type="submit" data-event-click="create" data-bind-value="'user.form.submit' | t"></a>
           </div>
 
           <div id="emailNote" class="form-group col-sm-6 col-xs-12">
-            <span>Wij houden u per email op de hoogte</span>
+            <span data-bind="'content.emailNote' | t"></span>
           </div>
 
-          <div class="feedback form-group" data-hideif="user.isNew">
-            <span class="horizontal-center">Bedankt voor uw aanmelding!</span>
+          <div id="feedback" class="form-group col-xs-12" data-hideif="user.isNew">
+            <span class="horizontal-center" data-bind="'content.feedback' | t"></span>
           </div>
-
         </form>
       </div>
     </div>
