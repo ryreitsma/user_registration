@@ -37,7 +37,7 @@
         <form id="new_user" data-formfor-user="user" data-event-submit="create">
 
           <span class="error" data-foreach-error="user.errors">
-            <div data-bind-class="error.attribute">
+            <div class="error col-xs-12">
               <span data-bind="error.attribute | prepend 'user.' | translate"></span>
               <span data-bind="error.message"></span>
             </div>
