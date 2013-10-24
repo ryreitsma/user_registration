@@ -1,28 +1,23 @@
-<% honeypot_field_name = Rails.application.config.honeypot_field_name %>
-
 <div class="container-fluid">
   <div class="jumbotron">
+    <div id="logo">
+      <img class="img-responsive horizontal-center" src="<%= asset_path("logo.png") %>">
+    </div>
 
-      <div id="logo">
-        <img class="img-responsive horizontal-center" src="<%= asset_path("logo.png") %>">
+    <div id="pay-off">
+      <p class="horizontal-center" data-bind="'content.payoff' | t"></p>
+    </div>
+
+    <div id="bg-container">
+      <div id="phones">
+        <img class="img-responsive horizontal-center" src="<%= asset_path("ensemble.png") %>">
       </div>
-
-      <div id="pay-off">
-        <p class="horizontal-center" data-bind="'content.payoff' | t"></p>
-      </div>
-
-      <div id="bg-container">
-        <div id="phones">
-          <img class="img-responsive horizontal-center" src="<%= asset_path("ensemble.png") %>">
-        </div>
-      </div>
-
+    </div>
   </div>
 </div>
 
 <div id="content" class="container">
   <div class="row">
-
     <div class="col-sm-5 col-sm-offset-1 col-xs-12">
       <p data-bind="'content.description' | t"></p>
       <ul>
@@ -32,42 +27,6 @@
       </ul>
     </div>
 
-    <div class="col-sm-5 col-xs-12" id="registration-form" role="form">
-      <div class="row">
-        <form id="new_user" data-formfor-user="user" data-event-submit="create">
-
-          <span class="error" data-foreach-error="user.errors">
-            <div class="error col-xs-12">
-              <span data-bind="error.attribute | prepend 'user.' | translate"></span>
-              <span data-bind="error.message"></span>
-            </div>
-          </span>
-
-          <div class="form-group">
-            <input type="text" class="form-control col-xs-12" data-bind="user.name" data-bind-placeholder="'user.form.placeholders.name' | t" name="name"/>
-          </div>
-
-          <div class="form-group">
-            <input type="email" class="form-control col-xs-12"  data-bind="user.email" data-bind-placeholder="'user.form.placeholders.email' | t" name="mail"/>
-          </div>
-
-          <div class="form-group">
-            <input type="text" data-bind="user.<%= honeypot_field_name %>" placeholder="<%= honeypot_field_name %>" name="<%= honeypot_field_name %>"/>
-          </div>
-
-          <div class="form-group">
-            <input id="submitbutton" class="btn col-sm-6 col-xs-12 horizontal-center" type="submit" data-event-click="create" data-bind-value="'user.form.submit' | t"></a>
-          </div>
-
-          <div id="emailNote" class="form-group col-sm-6 col-xs-12">
-            <span data-bind="'content.emailNote' | t"></span>
-          </div>
-
-          <div id="feedback" class="form-group col-xs-12" data-hideif="user.isNew">
-            <span class="horizontal-center" data-bind="'content.feedback' | t"></span>
-          </div>
-        </form>
-      </div>
-    </div>
+    <div class="col-sm-5 col-xs-12" id="registration-form" role="form" data-view="UsersFormView"></div>
   </div>
 </div>
