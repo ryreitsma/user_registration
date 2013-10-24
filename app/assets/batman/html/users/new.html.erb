@@ -27,6 +27,11 @@
       </ul>
     </div>
 
-    <div class="col-sm-5 col-xs-12" id="registration-form" role="form" data-view="UsersFormView"></div>
+    <div class="col-sm-5 col-xs-12">
+      <div id="registration-form" role="form" data-view="UsersFormView"></div>
+      <div id="feedback" class="form-group col-xs-12" data-hideif="user.isNew">
+        <span class="horizontal-center" data-bind="'content.feedback' | t"></span>
+      </div>
+    </div>
   </div>
 </div>
