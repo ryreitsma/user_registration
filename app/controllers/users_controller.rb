@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    @user = User.new(params[:user].permit(:name, :email))
+    @user = User.new(user_params)
 
     if @user.save
       render json: @user, status: :created
@@ -14,18 +14,15 @@ class UsersController < ApplicationController
   end
 
 private
+  def user_params
+    @user_params ||= params[:user].permit(:name, :email)
+  end
+
   def honeypot_field
     params[:user][honeypot_field_name]
   end
 
   def honeypot_response
-    user_params = params[:user]
-    user_params.delete(honeypot_field_name)
-
     render json: User.fake(user_params), status: :created
-  end
-
-  def strip_honeypot_param
-    params[:user].delete(honeypot_field_name)
   end
 end
