@@ -19,6 +19,8 @@ gem 'therubyracer'
 gem 'uglifier'
 
 gem 'batman-rails'
+gem "premailer-rails"
+gem "nokogiri"
 
 group :development, :test do
   gem "database_cleaner"
@@ -28,6 +30,7 @@ group :development, :test do
   gem "selenium-webdriver"
   gem "capistrano-rails"
   gem "capistrano-bundler"
+  gem "letter_opener"
 end
 
 # To use Jbuilder templates for JSON
