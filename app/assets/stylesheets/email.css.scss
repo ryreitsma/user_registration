@@ -1,0 +1,69 @@
+$email-background: #e4f4f7;
+$email-body-color: #0a404d;
+$email-footer-color-grey:#b3b3b3;
+
+table {
+  color: $email-body-color;
+  width: 680px;
+  margin: 0 auto;
+  border: 0;
+}
+
+td {
+  h1, p {
+    margin-left: 70px;
+    width: 530px;
+    margin-right: 80px;
+    margin-bottom: 30px;
+    line-height: 2em;
+  }
+  h1 {
+    margin-top: 50px;
+  }
+}
+
+.wrapper {
+  background-color: $email-background;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.block {
+  display: block;
+}
+
+.logo {
+  width: 210px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-left: 15px;
+}
+
+.header-text {
+  text-align: right;
+  font-weight: bold;
+  padding-right: 15px;
+}
+
+.small {
+  font-size: 12px;
+}
+
+a {
+  color: $email-body-color;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:visited {
+  color: $email-body-color;
+  text-decoration: none;
+}
+a:active {
+  text-decoration: underline;
+}
+
+.footer-text{
+  color:$email-footer-color-grey;
+}

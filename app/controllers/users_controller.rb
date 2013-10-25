@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user].permit(:name, :email))
 
     if @user.save
+      UserMailer.registration_email(@user).deliver
       render json: @user, status: :created
     else
       render json: @user.errors, status: :unprocessable_entity

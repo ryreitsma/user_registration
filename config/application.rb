@@ -8,6 +8,10 @@ Bundler.require(:default, Rails.env)
 
 module UserRegistration
   class Application < Rails::Application
+    # NOTE: set assets.enabled for backwards compatibility for premailer gem
+    # it is a deprecated Rails 3 config key, which is checked by premailer to
+    # see if the asset pipeline can be used to find the css file
+    config.assets.enabled = true
     config.assets.paths << Rails.root.join('app/assets/batman/html')
     config.assets.register_mime_type('text/html', '.html')
 
@@ -23,5 +27,6 @@ module UserRegistration
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :nl
+    config.assets.precompile += ['email.css']
   end
 end
