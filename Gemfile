@@ -21,6 +21,7 @@ gem 'uglifier'
 gem 'batman-rails'
 gem "premailer-rails"
 gem "nokogiri"
+gem 'json'
 
 group :development, :test do
   gem "database_cleaner"

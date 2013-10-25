@@ -1,0 +1,20 @@
+namespace :thor do
+  desc "Generate a new secret token"
+  task :run_tasks do
+    on roles :web do
+      within release_path do
+        fetch(:thor_tasks).each do |task|
+          execute :bundle, :exec, :thor, task
+        end
+      end
+    end
+  end
+end
+
+namespace :load do
+  before 'deploy:updated', 'thor:run_tasks'
+
+  task :defaults do
+    set :thor_tasks, %w("i18n:build_json")
+  end
+end
