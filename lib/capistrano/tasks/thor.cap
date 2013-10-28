@@ -1,5 +1,5 @@
 namespace :thor do
-  desc "Generate a new secret token"
+  desc "Run thor tasks on web servers"
   task :run_tasks do
     on roles :web do
       within release_path do
