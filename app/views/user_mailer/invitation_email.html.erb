@@ -1,0 +1,43 @@
+<% background_png = attach_asset("middle.png") %>
+
+<table cellpadding="0" cellspacing="0">
+  <tr>
+    <td><%= image_tag_from_asset("logo.png", class: "block logo") %></td><td colspan="8"></td>
+    <td class="header-text">Inschrijving Coconut Mobile App</td>
+  </tr>
+  <tr>
+    <td colspan="10"><%= image_tag_from_asset("top.png", class: "block") %></td>
+  </tr>
+  <tr style="background-color: white; background-image: url(<%= background_png %>); background-repeat: repeat-y;" >
+    <td  colspan="10" background="<%= background_png %>"><h1>Beste <%= @invitation.recipient_name %>,</h1></td>
+  </tr>
+  <tr style=" background-color: white; background-image: url(<%= background_png %>); background-repeat: repeat-y;">
+    <td colspan="10" background="<%= background_png %>">
+      <p>U bent door <%= @invitation.inviter_name %> uitgenodigd voor de Coconut App! </p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean placerat dictum elit consequat consequat. Aliquam sem nisl, aliquet facilisis pellentesque a, posuere ac ante. Suspendisse elementum eget augue in laoreet. Suspendisse laoreet justo ut nibh sagittis lobortis. Duis lobortis justo eros. Nunc ut nisl nec augue luctus porta ac eget lorem. Vestibulum dictum mi lacus, in condimentum orci consectetur at. Aenean nec commodo arcu.</p>
+    </td>
+  </tr>
+  <tr style="background-color: white;background-image: url(<%= background_png %>); background-repeat: repeat-y;">
+    <td colspan="10" background="<%= background_png %>">
+      <p>Cras tempus adipiscing eros, vitae interdum enim convallis eget. Nullam vel orci faucibus, porta est nec, dapibus erat. Cras vulputate sapien a lorem elementum, eget lobortis libero ultrices. Integer bibendum nibh non metus semper vulputate. Nunc tincidunt tellus vel luctus mattis. Nulla condimentum rhoncus ligula, ac vehicula justo vehicula non. Proin nec ipsum nunc. In dapibus metus in arcu blandit, pulvinar dictum lectus dapibus. Etiam ultricies facilisis adipiscing. Aenean venenatis feugiat metus, at commodo libero tincidunt nec. Fusce eu eros eu purus suscipit ultricies at sed diam. Praesent in enim placerat, ornare purus vitae, ultricies leo.</p>
+    </td>
+  </tr>
+  <tr style=" background-color: white; background-image: url(<%= background_png %>); background-repeat: repeat-y;">
+    <td colspan="10" background="<%= background_png %>">
+      <p class="footer-text">Met vriendelijke groet,<br><br>Het Coconut Team</p>
+    </td>
+  </tr>
+  <tr style="background-color: white; background-image: url(<%= background_png %>); background-repeat: repeat-y;">
+    <td colspan="10" background="<%= background_png %>">
+      <p class="footer-text small">Heb je nog vragen? Stuur een e-mail naar info@coconutcenter.com</p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="10"><%= image_tag_from_asset("bottom.png", class: "block") %></td>
+  </tr>
+  <tr>
+    <td colspan="10" style="text-align: center; padding-top: 30px;padding-bottom: 30px;">
+      <a href="http://www.coconutcenter.com" title="Bezoek de Coconut website" class="footer-link">www.coconutcenter.com</a>
+    </td>
+  </tr>
+</table>

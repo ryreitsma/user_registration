@@ -46,7 +46,7 @@ li {
   line-height: 25px;
 }
 
-#submitbutton {
+.submitbutton {
   color: #fff;
   font-size: 16px;
   font-weight: bold;
@@ -60,7 +60,7 @@ li {
   border-bottom-style: solid;
 }
 
-#submitbutton:hover{
+.submitbutton:hover{
   background: #92c65a;
   background: -moz-linear-gradient(top, #92c65a 0%, #79b835 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, #92c65a), color-stop(100%, #79b835));
@@ -71,7 +71,7 @@ li {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#92c65a', endColorstr='#79b835', GradientType=0 );
 }
 
-#submitbutton:active{
+.submitbutton:active{
   background: #6aa72d;
   background: -moz-linear-gradient(top, #6aa72d 0%, #79b732 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, #6aa72d), color-stop(100%, #79b732));
@@ -90,13 +90,24 @@ li {
   margin-bottom: 50px;
 }
 
+//Block: Hiding and displaying input-elements because of honeypot;
 #new_user input[type='text'] {
   display: none;
 }
-
 #new_user input[name='name'] {
   display: block;
 }
+#new_invitation input[type='text'] {
+  display: none;
+}
+#new_invitation input[name='inviter_name'] {
+  display: block;
+}
+#new_invitation input[name='recipient_name'] {
+  display: block;
+}
+//End block
+
 
 span.error div{
   margin-left: 15px;

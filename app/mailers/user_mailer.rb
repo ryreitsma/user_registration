@@ -10,4 +10,9 @@ class UserMailer < ActionMailer::Base
     @user = user
     mail(to: "#{@user.name} <#{@user.email}>", subject: "Inschrijving Coconut Mobile App")
   end
+
+  def invitation_email(invitation)
+    @invitation = invitation
+    mail(to: "#{invitation.recipient_name} <#{invitation.recipient_email}>", subject: "Uitnodiging Coconut Mobile App")
+  end
 end

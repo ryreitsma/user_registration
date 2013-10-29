@@ -32,6 +32,8 @@ group :development, :test do
   gem "capistrano-rails"
   gem "capistrano-bundler"
   gem "letter_opener"
+
+  gem "debugger"
 end
 
 # To use Jbuilder templates for JSON
