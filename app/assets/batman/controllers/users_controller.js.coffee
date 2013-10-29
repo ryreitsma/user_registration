@@ -5,5 +5,7 @@ class UserRegistration.UsersController extends UserRegistration.ApplicationContr
     @set('user', new UserRegistration.User)
 
   create: (params) ->
+    return unless @user.isNew
+
     @user.save =>
       @set('done', true)
