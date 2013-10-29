@@ -1,6 +1,10 @@
+language: ruby
+cache: bundler
 before_script:
   - cp config/database.yml.travis config/database.yml
   - rake secret > config/secret_token
-  - thor i18n:build_json
+  - bundle exec thor i18n:build_json
   - mysql -e 'create database myapp_test;'
-
+script:
+  - bundle install
+  - bundle exec rspec spec --options .rspec-ci
