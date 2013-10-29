@@ -7,4 +7,5 @@ before_script:
   - mysql -e 'create database myapp_test;'
 script:
   - bundle install
+  - bundle exec rake db:test:prepare
   - bundle exec rspec spec --options .rspec-ci
