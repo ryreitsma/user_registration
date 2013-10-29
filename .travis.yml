@@ -1,4 +1,6 @@
 before_script:
   - cp config/database.yml.travis config/database.yml
+  - rake secret > config/secret_token
+  - thor i18n:build_json
   - mysql -e 'create database myapp_test;'
 
