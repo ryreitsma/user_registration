@@ -8,6 +8,8 @@
 
 #= require batman.i18n
 
+#= require ./extensions
+
 #= require_self
 
 #= require_tree ./lib

@@ -28,8 +28,8 @@
     </div>
 
     <div class="col-sm-5 col-xs-12">
-      <div id="registration-form" role="form" data-view="UsersFormView"></div>
-      <div id="feedback" class="form-group col-xs-12" data-hideif="user.isNew">
+      <div id="registration-form" role="form" data-partial="users/form" data-closewhen="user.isNew | not"></div>
+      <div id="feedback" class="form-group col-xs-12" data-openwhen="user.isNew | not">
         <span class="horizontal-center" data-bind="'content.feedback' | t"></span>
       </div>
     </div>
