@@ -1,35 +1,37 @@
 <% honeypot_field_name = Rails.application.config.honeypot_field_name %>
 
-<div class="row" style="height: 100%">
-  <form id="new_user" data-formfor-user="user" data-event-submit="create">
+<form class="form-inline" id="new_user" data-formfor-user="user" data-event-submit="create">
+
+  <div class="col-xs-12">
+    <p id="pay-off" class="horizontal-center" data-bind="'content.payoff' | t"></p>
+  </div>
+
+  <div class="col-xs-12 cinput">
+    <input type="text" class="form-control " data-bind="user.name" data-bind-placeholder="'user.form.placeholders.name' | t" name="name"/>
+  </div>
+
+  <div class="col-xs-12 cinput">
+    <input type="email" class="form-control" data-bind="user.email" data-bind-placeholder="'user.form.placeholders.email' | t" name="mail"/>
+  </div>
+
+
+  <input type="text" data-bind="user.<%= honeypot_field_name %>" placeholder="<%= honeypot_field_name %>" name="<%= honeypot_field_name %>"/>
+
+  <div class="col-xs-12 cinput2">
+    <input id="submitbutton" class="btn form-control" type="submit" data-event-click="create" data-bind-value="'user.form.submit' | t" />
+  </div>
+
+  <div class="row">
     <span class="error" data-foreach-error="user.errors">
       <div class="error col-xs-12">
         <span data-bind="error.attribute | prepend 'user.' | translate"></span>
         <span data-bind="error.message"></span>
       </div>
     </span>
+  </div>
 
+  <div id="feedback" class="form-group" data-hideif="user.isNew">
+    <span class="horizontal-center" data-bind="'content.feedback' | t"></span>
+  </div>
 
-    <div class="form-group">
-      <input type="text" class="form-control col-xs-12" data-bind="user.name" data-bind-placeholder="'user.form.placeholders.name' | t" name="name"/>
-    </div>
-
-    <div class="form-group">
-      <input type="email" class="form-control col-xs-12" data-bind="user.email" data-bind-placeholder="'user.form.placeholders.email' | t" name="mail"/>
-    </div>
-
-
-    <div class="form-group">
-      <input type="text" data-bind="user.<%= honeypot_field_name %>" placeholder="<%= honeypot_field_name %>" name="<%= honeypot_field_name %>"/>
-    </div>
-
-    <div class="form-group">
-      <input class="btn submitbutton col-sm-6 col-xs-12 horizontal-center" type="submit" data-bind-value="'user.form.submit' | t" />
-    </div>
-
-    <div id="emailNote" class="form-group col-sm-6 col-xs-12">
-      <span data-bind="'content.emailNote' | t"></span>
-    </div>
-  </form>
-</div>
-
+</form>

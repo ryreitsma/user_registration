@@ -6,7 +6,7 @@ set :rails_env, :development
 # Supports bulk-adding hosts to roles, the primary
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
-role :all, 'ec2-54-229-178-87.eu-west-1.compute.amazonaws.com'
+role :all, '54.229.178.87'
 
 # Extended Server Syntax
 # ======================
@@ -14,7 +14,7 @@ role :all, 'ec2-54-229-178-87.eu-west-1.compute.amazonaws.com'
 # definition into the server list. The second argument
 # something that quacks like a has can be used to set
 # extended properties on the server.
-server 'ec2-54-229-178-87.eu-west-1.compute.amazonaws.com', user: 'deploy', roles: %w{web app}
+server '54.229.178.87', user: 'deploy', roles: %w{web app}
 
 # you can set custom ssh options
 # it's possible to pass any option but you need to keep in mind that net/ssh understand limited list of options

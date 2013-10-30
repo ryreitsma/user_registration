@@ -1,38 +1,52 @@
-<div class="container-fluid">
-  <div class="jumbotron">
-    <div id="logo">
-      <img class="img-responsive horizontal-center" src="<%= asset_path("logo.png") %>">
-    </div>
-
-    <div id="pay-off">
-      <p class="horizontal-center" data-bind="'content.payoff' | t"></p>
-    </div>
-
-    <div id="bg-container">
-      <div id="phones">
-        <img class="img-responsive horizontal-center" src="<%= asset_path("ensemble.png") %>">
+<div id="container-top" class="container-fw">
+  <img id="logo" class="img-responsive horizontal-center" src="<%= asset_path("logo.png") %>">
+  <div id="container-bg">
+    <div id="pusher">
+      <div id="form-block">
+        <div class="container">
+          <div id="registration-form" role="form" data-partial="users/form"></div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<div id="content" class="container">
-  <div class="row">
-    <div class="col-sm-5 col-sm-offset-1 col-xs-12">
-      <p data-bind="'content.description' | t"></p>
+<div id="container-middle" class="container-fw">
+  <div class="container">
+    <div class="row">
+
+      <div id="content-right" class="col-xs-12 col-sm-6 move-right">
+        <p data-bind="'content.description' | t"></p>
+        <ul>
+          <li data-bind="'content.advantage.one'   | t"></li>
+          <li data-bind="'content.advantage.two'   | t"></li>
+          <li data-bind="'content.advantage.three' | t"></li>
+          <li data-bind="'content.advantage.four'  | t"></li>
+        </ul>
+      </div>
+
+      <div id="content-left" class="col-xs-12 col-sm-6 move-left">
+        <img class="img-responsive horizontal-center" src="<%= asset_path("ensemble.png") %>">
+        <img id="brands" class="img-responsive horizontal-center" src="<%= asset_path("brands.png") %>">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="container-bottom" class="container-fw">
+  <div class="container">
+    <div id="title" class="horizontal-center">
+      <span class="leader horizontal-center">Nodig een collega uit</span>
+      <span class="subtitle horizontal-center">Help een collega met aanmelden</span>
+    </div>
+
+    <div class="row">
       <ul>
-        <li data-bind="'content.advantage.one'   | t"></li>
-        <li data-bind="'content.advantage.two'   | t"></li>
-        <li data-bind="'content.advantage.three' | t"></li>
+        <li><a href="http://www.coconutcenter.com">www.coconutcenter.com</a></li>
       </ul>
     </div>
 
-    <div class="col-sm-5 col-xs-12">
-      <div id="registration-form" role="form" data-partial="users/form" data-closewhen="user.isNew | not"></div>
-      <div id="feedback" class="form-group col-xs-12" data-openwhen="user.isNew | not">
-        <span class="horizontal-center" data-bind="'content.feedback' | t"></span>
-      </div>
-    </div>
   </div>
               .
   <div class="row">
