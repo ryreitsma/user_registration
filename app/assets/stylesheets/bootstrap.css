@@ -921,17 +921,6 @@ pre code {
   .col-sm-pull-11 {
     right: 91.66666666666666%;
   }
-
-  .col-xs-offset-1 {
-    margin-left: 8.333333333333332%;
-  }
-  .col-xs-offset-2 {
-    margin-left: 16.666666666666664%;
-  }
-  .col-xs-offset-3 {
-    margin-left: 25%;
-  }
-
   .col-sm-offset-1 {
     margin-left: 8.333333333333332%;
   }
@@ -1553,20 +1542,16 @@ input[type="number"]::-webkit-inner-spin-button {
   height: auto;
 }
 .form-control:-moz-placeholder {
-  color: #bfbfbf;
-  text-shadow: 0px 1px #fff;
+  color: #9ad5e5;
 }
 .form-control::-moz-placeholder {
-  color: #bfbfbf;
-  text-shadow: 0px 1px #fff;
+  color: #9ad5e5;
 }
 .form-control:-ms-input-placeholder {
-  color: #bfbfbf;
-  text-shadow: 0px 1px #fff;
+  color: #9ad5e5;
 }
 .form-control::-webkit-input-placeholder {
-  color: #bfbfbf;
-  text-shadow: 0px 2px #fff;
+  color: #9ad5e5;
 }
 .form-control {
   display: block;
@@ -1575,22 +1560,23 @@ input[type="number"]::-webkit-inner-spin-button {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.428571429;
-  color: #08414c;
-  font-weight: bold;
+  color: #555555;
+  color: #09404c;
   vertical-align: middle;
-  background-color: #eaeaea;
-  border: 1px solid #eaeaea;
-  border-top-color: #d8d8d8;
-  border-width: 2px;
-  border-radius: 4px;
+  background-color: #ffffff;
+  border: 2px solid #fff;
+  border-top-color: #8ccbda;
+  border-radius: 3px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 .form-control:focus {
-  border-color: #86d7ea;
+  border-color: #66afe9;
+  border-color: #8ccbda;
   outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.3);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 .form-control[disabled],
@@ -3620,6 +3606,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   }
   .navbar-form .form-control {
     display: inline-block;
+    margin-bottom:15px;
   }
   .navbar-form .radio,
   .navbar-form .checkbox {
@@ -4146,13 +4133,12 @@ a.list-group-item.active > .badge,
 }
 .jumbotron {
   padding: 30px;
-  padding-bottom: 0px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-size: 21px;
   font-weight: 200;
   line-height: 2.1428571435;
   color: inherit;
-  background-color: #cdf3fd;
+  background-color: #eeeeee;
 }
 .jumbotron h1 {
   line-height: 1;
@@ -4164,16 +4150,10 @@ a.list-group-item.active > .badge,
 .container .jumbotron {
   border-radius: 6px;
 }
-@media screen and (max-width: 768px) {
-  .jumbotron {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-}
 @media screen and (min-width: 768px) {
   .jumbotron {
     padding-top: 48px;
-    padding-bottom: 0px;
+    padding-bottom: 48px;
   }
   .container .jumbotron {
     padding-left: 60px;
