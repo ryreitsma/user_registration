@@ -37,8 +37,8 @@
               .
   <div class="row">
     <div class="col-sm-5 col-xs-12">
-      <div id="registration-form" role="form" data-view="InvitationFormView"></div>
-      <div id="feedbackInvitation" class="form-group col-xs-12" data-hideif="user.doe">
+      <div id="registration-form" role="form" data-partial="users/invitation"></div>
+      <div id="feedbackInvitation" class="form-group col-xs-12" data-showif="showInvitationFeedback">
         <span class="horizontal-center" data-bind="'content.invite.feedback' | t"></span>
       </div>
     </div>

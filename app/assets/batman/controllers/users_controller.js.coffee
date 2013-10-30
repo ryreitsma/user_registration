@@ -3,19 +3,21 @@ class UserRegistration.UsersController extends UserRegistration.ApplicationContr
 
   new: (params) ->
     @set('user', new UserRegistration.User)
-    @set('doe', true)
+    @set('showInvitationFeedback', false)
     @setInvitation()
 
   create: (params) ->
     return unless @user.isNew
-      
+
     @user.save( =>
       @set('done', true)
     )
 
   createInvitation: (params) ->
-    @invitation.save( =>
-      @setInvitation @invitation.get('inviter_name')
+    @invitation.save( (ErrorSet, Invitation) =>
+      if (ErrorSet is undefined)
+        @setInvitation Invitation.get('inviter_name')
+        @set('showInvitationFeedback', true)
     )
 
   setInvitation: (inviter_name) ->
