@@ -7,7 +7,9 @@ nl:
       two: Volg groepen en collega's
       three: Het laatste bedrijfsnieuws
       four: Creëer content vanaf je telefoon
-
+    colleagues:
+      title: Nodig een collega uit
+      subtitle: Help een collega met aanmelden
     emailNote: Wij houden u per email op de hoogte
     feedback: Bedankt voor uw aanmelding!
 
