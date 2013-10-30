@@ -7,6 +7,8 @@ class UserRegistration.UsersController extends UserRegistration.ApplicationContr
     @SetInvitation()
 
   create: (params) ->
+    return unless @user.isNew
+      
     @user.save( =>
       @set('done', true)
     )
