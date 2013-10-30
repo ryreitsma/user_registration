@@ -1,9 +1,6 @@
 <% honeypot_field_name = Rails.application.config.honeypot_field_name %>
 
-
 <form class="form-inline" id="new_user" data-formfor-user="user" data-event-submit="create">
-
-
 
   <div class="col-xs-12">
     <p id="pay-off" class="horizontal-center" data-bind="'content.payoff' | t"></p>
@@ -24,12 +21,12 @@
   </div>
 
   <div class="row">
-  <span class="error" data-foreach-error="user.errors">
-    <div class="error col-xs-12">
-      <span data-bind="error.attribute | prepend 'user.' | translate"></span>
-      <span data-bind="error.message"></span>
-    </div>
-  </span>
+    <span class="error" data-foreach-error="user.errors">
+      <div class="error col-xs-12">
+        <span data-bind="error.attribute | prepend 'user.' | translate"></span>
+        <span data-bind="error.message"></span>
+      </div>
+    </span>
   </div>
 
   <div id="feedback" class="form-group" data-hideif="user.isNew">
