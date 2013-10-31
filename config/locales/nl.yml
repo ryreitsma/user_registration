@@ -12,6 +12,10 @@ nl:
       subtitle: Help een collega met aanmelden
     emailNote: Wij houden u per email op de hoogte
     feedback: Bedankt voor uw aanmelding!
+    invite:
+      header: Nodig een collega uit
+      text: Help je collega met..
+      feedback: Bedankt voor het uitnodigen van uw collega!
 
   user:
     name: naam
@@ -21,6 +25,12 @@ nl:
       placeholders:
         name: Uw naam
         email: Uw e-mail adres
+
+  invitation:
+    inviter_name: Uw eigen naam
+    recipient_name: Naam collega
+    recipient_email: Email collega
+    invite: Uitnodigen
 
   errors:
     messages:

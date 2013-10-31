@@ -36,16 +36,29 @@
 
 <div id="container-bottom" class="container-fw">
   <div class="container">
-    <div id="title" class="horizontal-center">
+    <div class="row">	
       <span data-bind="'content.colleagues.title' | t" class="leader horizontal-center"></span>
       <span data-bind="'content.colleagues.subtitle' | t" class="subtitle horizontal-center"></span>
     </div>
 
     <div class="row">
-      <ul>
-        <li><a href="http://www.coconutcenter.com">www.coconutcenter.com</a></li>
-      </ul>
+      <div class="col-xs-12">
+        <div id="registration-form" role="form" data-partial="invitations/new"></div>
+      </div>
     </div>
 
+    <div class="row">
+      <div class="col-xs-12 leader" id="feedbackInvitation" data-showif="controllers.invitations.showInvitationFeedback">
+        <span id="feedback" class="horizontal-center" data-bind="'content.invite.feedback' | t"></span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <ul>
+          <li><a href="http://www.coconutcenter.com">www.coconutcenter.com</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>

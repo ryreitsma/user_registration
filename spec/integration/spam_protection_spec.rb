@@ -28,9 +28,11 @@ feature "Spam protection", js: true do
       jQuery('input').show();
     SCRIPT
 
-    fill_in(I18n.t('user.form.placeholders.name'), with: 'henk')
-    fill_in(I18n.t('user.form.placeholders.email'), with: 'henk@ogd.nl')
-    fill_in(Rails.application.config.honeypot_field_name, with: 'henk')
+    within('form#new_user') do
+      fill_in(I18n.t('user.form.placeholders.name'), with: 'henk')
+      fill_in(I18n.t('user.form.placeholders.email'), with: 'henk@ogd.nl')
+      fill_in(Rails.application.config.honeypot_field_name, with: 'henk')
+    end
 
     expect(page).to have_no_content(expected_feedback)
 

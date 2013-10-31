@@ -3,6 +3,7 @@ UserRegistration::Application.routes.draw do
   root to: "batman#index"
 
   post 'users' => 'users#create'
+  post 'invitations' => 'invitations#create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
