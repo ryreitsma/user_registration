@@ -1,6 +1,6 @@
 <% honeypot_field_name = Rails.application.config.honeypot_field_name %>
 
-<form id="new_invitation" data-formfor-invitation="invitation" data-event-submit="createInvite">
+<form id="new_invitation" data-formfor-invitation="controllers.invitations.invitation" data-event-submit="controllers.invitations.create">
 
   <div class="col-xs-12 col-sm-4 col-md-3">
     <input type="text" class="form-control" data-bind="invitation.inviter_name" data-bind-placeholder="'invitation.inviter_name' | t" name="inviter_name"/>
@@ -17,7 +17,7 @@
   <input type="text" data-bind="invitation.<%= honeypot_field_name %>" placeholder="<%= honeypot_field_name %>" name="<%= honeypot_field_name %>"/>
 
   <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-3 col-md-offset-0">
-    <input class="btn form-control submit" type="submit" data-event-click="createInvitation" data-bind-value="'invitation.invite' | t" />
+    <input class="btn form-control submit" type="submit" data-event-click="controllers.invitations.create" data-bind-value="'invitation.invite' | t" />
   </div>
 
   <span class="error" data-foreach-error="invitation.errors">
