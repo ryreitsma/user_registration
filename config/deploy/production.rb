@@ -1,5 +1,5 @@
 set :stage, :production
-set :rails_env, :development
+set :rails_env, :production
 
 # Simple Role Syntax
 # ==================
