@@ -138,32 +138,37 @@ input.error {
   #container-bg {
     background-image:url('grid.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover  ;
     background-position: center center;
     max-width: 1102px;
     margin: 0 auto;
-
-    @media (min-width: 768px) {
-      height: 372px;
-    }
-
-    @media (min-width: 768px) and (max-width: 1220px) {
-      background-size: 100%;
-    }
 
     @media (max-width:865px) {
       background-image:url('grid_small.png');
       background-size: contain;
       min-height: 369px;
     }
+
+    @media (min-width: 944px) {
+     max-height: 372px;
+    }
+
+    @media (min-width: 866px) and (max-width: 990px) {
+      background-size: contain;
+    }
+
+    @media (min-width: 991px) {
+      height: 372px;
+      background-size: contain;
+    }
   }
 }
 
 #pusher {
-  padding-top:70px;
+  padding-top:25px;
 
   @media (max-width: 865px) {
-    padding-top: 30px;
+ //   padding-top: 30px;
   }
 }
 
