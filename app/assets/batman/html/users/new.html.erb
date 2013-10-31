@@ -36,26 +36,31 @@
 
 <div id="container-bottom" class="container-fw">
   <div class="container">
-    <div id="title" class="horizontal-center">
+
+    <div class="row">
       <span class="leader horizontal-center">Nodig een collega uit</span>
       <span class="subtitle horizontal-center">Help een collega met aanmelden</span>
     </div>
 
     <div class="row">
-      <ul>
-        <li><a href="http://www.coconutcenter.com">www.coconutcenter.com</a></li>
-      </ul>
-    </div>
-
-  </div>
-              .
-  <div class="row">
-    <div class="col-sm-5 col-xs-12">
-      <div id="registration-form" role="form" data-partial="users/invitation"></div>
-      <div id="feedbackInvitation" class="form-group col-xs-12" data-showif="showInvitationFeedback">
-        <span class="horizontal-center" data-bind="'content.invite.feedback' | t"></span>
+      <div class="col-xs-12">
+        <div id="registration-form" role="form" data-partial="users/invitation"></div>
       </div>
     </div>
-  </div>
 
+    <div class="row">
+      <div class="col-xs-12 leader" id="feedbackInvitation" data-showif="showInvitationFeedback">
+        <span id="feedback" class="horizontal-center" data-bind="'content.invite.feedback' | t"></span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <ul>
+          <li><a href="http://www.coconutcenter.com">www.coconutcenter.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
 </div>

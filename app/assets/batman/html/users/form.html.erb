@@ -14,11 +14,10 @@
     <input type="email" class="form-control" data-bind="user.email" data-bind-placeholder="'user.form.placeholders.email' | t" name="mail"/>
   </div>
 
-
   <input type="text" data-bind="user.<%= honeypot_field_name %>" placeholder="<%= honeypot_field_name %>" name="<%= honeypot_field_name %>"/>
 
   <div class="col-xs-12 cinput2">
-    <input id="submitbutton" class="btn form-control" type="submit" data-event-click="create" data-bind-value="'user.form.submit' | t" />
+    <input class="btn form-control submit" type="submit" data-event-click="create" data-bind-value="'user.form.submit' | t" />
   </div>
 
   <div class="row">

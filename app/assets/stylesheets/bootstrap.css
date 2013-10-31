@@ -1545,7 +1545,7 @@ input[type="number"]::-webkit-inner-spin-button {
   color: #9ad5e5;
 }
 .form-control::-moz-placeholder {
-  color: #9ad5e5;
+  color: #88c2cb;
 }
 .form-control:-ms-input-placeholder {
   color: #9ad5e5;
@@ -1557,6 +1557,7 @@ input[type="number"]::-webkit-inner-spin-button {
   display: block;
   width: 100%;
   height: 34px;
+  height: 42px;
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.428571429;
