@@ -1,6 +1,4 @@
 :tddium:
   :ruby_version: ruby-1.9.3-p448
   :hooks: 
-    :worker_setup:
-      - 'bundle exec rake secret > config/secret_token'
-      - 'bundle exec thor i18n:build_json'
+    :worker_setup:'bundle exec rake secret > config/secret_token; bundle exec thor i18n:build_json'
