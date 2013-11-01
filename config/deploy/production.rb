@@ -14,7 +14,7 @@ role :all, '54.229.178.87'
 # definition into the server list. The second argument
 # something that quacks like a has can be used to set
 # extended properties on the server.
-server '54.229.178.87', user: 'deploy', roles: %w{web app}
+server '54.229.178.87', user: 'deploy', roles: %w{web app db}
 
 # you can set custom ssh options
 # it's possible to pass any option but you need to keep in mind that net/ssh understand limited list of options
