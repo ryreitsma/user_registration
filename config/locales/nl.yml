@@ -11,12 +11,12 @@ nl:
       title: Nodig een collega uit
       subtitle: De Coconut App komt eraan!
 
-    feedback: Bedankt voor uw aanmelding!
+    feedback: Dank je wel! We hebben zojuist een bevestigingsmail naar je verzonden.
 
     invite:
       header: Nodig een collega uit
       text: Help je collega met..
-      feedback: Bedankt voor het uitnodigen van uw collega!
+      feedback: Dank je wel! We hebben meteen een mail naar je collega gestuurd.
 
   user:
     name: naam
