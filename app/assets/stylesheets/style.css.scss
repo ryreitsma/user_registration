@@ -32,7 +32,10 @@ body {
 #pay-off {
   font-family: Cabin, bold;
   font-weight: bold;
-  font-size: 18pt;
+  font-size:13pt;
+  @media (min-width: 866px){
+    font-size: 18pt;
+  }
   text-align: center;
   max-width: 787px;
   margin-bottom: 20px;
@@ -85,6 +88,21 @@ input.error {
 }
 
 #container-top {
+
+  #feedback {
+    span {
+      font-family: Cabin, bold;
+      font-weight: bold;
+      font-size:13pt;
+      color: $font-color;
+      @media (min-width: 866px){
+        font-size: 18pt;
+      }
+      text-align: center;
+      font-size: 13pt;
+    }
+  }
+
   background: #bfedfa; /* Old browsers */
   background: -moz-linear-gradient(top, #bfedfa 0%, #d6f7fe 96%, #d2f0f8 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#bfedfa), color-stop(96%,#d6f7fe), color-stop(100%,#d2f0f8)); /* Chrome,Safari4+ */
@@ -206,7 +224,7 @@ input {
 
 #container-middle {
   padding-top:75px;
-  font-size: 12pt;
+  font-size: 13pt;
 
   @media (max-width: 767px) {
     padding-top: 50px;

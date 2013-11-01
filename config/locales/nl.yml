@@ -1,17 +1,18 @@
 nl:
   content:
-    payoff: Coconut is binnenkort ook beschikbaar op de mobiel. Meld je aan en blijf op de hoogte van de releasedatum voor jouw Coconut.
-    description: Voor medewerkers van grote organisaties die behoefte hebben aan meer betrokkenheid en relevante kennis en informatie is er binnenkort ook de Coconut App.
+    payoff: Coconut is binnenkort ook beschikbaar op je mobiel. Meld je aan en we houden je graag op de hoogte. De Coconut App komt eraan!
+    description: De Coconut App maakt kennis delen en samenwerken nu nog makkelijker. Je weet altijd wat er speelt.
     advantage:
-      one: Overzichtelijke berichten tijdlijn
-      two: Volg groepen en collega's
-      three: Het laatste bedrijfsnieuws
-      four: Creëer content vanaf je telefoon
+      one: Volg groepen en collega's
+      two: Lees het laatste nieuws
+      three: Draag direct bij aan discussies
+      four: Deel content vanaf je telefoon
     colleagues:
       title: Nodig een collega uit
-      subtitle: Help een collega met aanmelden
-    emailNote: Wij houden u per email op de hoogte
+      subtitle: De Coconut App komt eraan!
+
     feedback: Bedankt voor uw aanmelding!
+
     invite:
       header: Nodig een collega uit
       text: Help je collega met..
@@ -24,10 +25,10 @@ nl:
       submit: Aanmelden
       placeholders:
         name: Uw naam
-        email: Uw e-mail adres
+        email: Uw email
 
   invitation:
-    inviter_name: Uw eigen naam
+    inviter_name: Naam afzender
     recipient_name: Naam collega
     recipient_email: Email collega
     invite: Uitnodigen
