@@ -1542,16 +1542,16 @@ input[type="number"]::-webkit-inner-spin-button {
   height: auto;
 }
 .form-control:-moz-placeholder {
-  color: #9ad5e5;
+  color: #a6b1b7;
 }
 .form-control::-moz-placeholder {
-  color: #88c2cb;
+  color: #a6b1b7;
 }
 .form-control:-ms-input-placeholder {
-  color: #9ad5e5;
+  color: #a6b1b7;
 }
 .form-control::-webkit-input-placeholder {
-  color: #9ad5e5;
+  color: #a6b1b7;
 }
 .form-control {
   display: block;
