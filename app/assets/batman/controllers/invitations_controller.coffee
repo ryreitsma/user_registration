@@ -10,9 +10,23 @@ class UserRegistration.InvitationsController extends UserRegistration.Applicatio
     @invitation.save( (ErrorSet, Invitation) =>
       if (ErrorSet is undefined)
         @setInvitation Invitation.get('inviter_name')
-        @set('showInvitationFeedback', true)
+        @showInvitationFeedBack()
     )
+
+  showInvitationFeedBack: ->
+    @set('showInvitationFeedback', true)
+    observer =  (newValue) =>
+      console.log "observer is working"
+      if newValue
+        @set('showInvitationFeedback', false)
+        @invitation.forget "recipient_name", observer
+        @invitation.forget "recipient_email", observer
+
+
+    @invitation.observe "recipient_name", observer
+    @invitation.observe "recipient_email", observer
 
   setInvitation: (inviter_name) ->
     @set('invitation', new UserRegistration.Invitation)
     @invitation.set('inviter_name', inviter_name) if inviter_name isnt undefined
+
